@@ -1,15 +1,3 @@
-/**
- * Import dependencies from node_modules
- * see commented examples below
- */
-
-// import 'some-node-module';
-// import SomeModule from 'some-node-module';
-
-/**
- * Write any other JavaScript below
- */
-
 const skills = {
   "Lenguajes de programación": { "Python": 90, "Javascript": 60, "R": 50 },
   "Testing": { "Cypress": 60, "Cucumber": 50, "Jest": 50, "Pytest": 60, "Selenium": 75, "SeleniumBase": 75 },
