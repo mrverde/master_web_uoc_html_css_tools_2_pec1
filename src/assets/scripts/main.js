@@ -46,7 +46,6 @@ const generateFieldSet = (skills, headerName, classWhereInsert) => {
 
   Object.entries(skills)
     .map((skillGroup, skillGroupIndex) => {
-      console.log(skillGroup[0])
       output += skillGroupHtml(skillGroup[0], skillGroupIndex)
       Object.entries(skills[skillGroup[0]])
         .map((skill, skillIndex) => {
