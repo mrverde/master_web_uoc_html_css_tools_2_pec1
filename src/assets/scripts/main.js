@@ -24,9 +24,9 @@ const generateFieldSet = (skills, headerName, classWhereInsert) => {
     const htmlSk = sk.replace(/\s/g, '').replace('é', '').toLowerCase()
 
     return `<div class="container-sk skill-${skIndex}">
-  <label for="${htmlSk}">${sk}</label>
-  <progress id="${htmlSk}" max="100" value="${skValue}"> ${skValue}% </progress>
-  </div>`}
+              <label for="${htmlSk}">${sk}</label>
+              <progress id="${htmlSk}" max="100" value="${skValue}"> ${skValue}% </progress>
+            </div>`}
 
   let output = "";
 

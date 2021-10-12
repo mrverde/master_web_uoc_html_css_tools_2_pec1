@@ -7,11 +7,11 @@ body {
   height: 100vh;
   margin: 0;
   padding: 2rem;
-  font-family: $font-family-sans-serif;
+  font-family: $primary-font;
   font-size: 16px;
   line-height: 24px;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
+  background-color: $bg-color;
+  color: $text-color;
 }
 
 .uoc-container {
@@ -39,10 +39,10 @@ body {
 }
 
 .uoc-title {
-  font-family: $font-family-serif;
+  font-family: $secondary-font;
   font-size: 24px;
   font-weight: 700;
-  color: $uoc-corporate;
+  color: $text-color;
 
   @media (min-width: $mqMinWidth) {
     font-size: 36px;
