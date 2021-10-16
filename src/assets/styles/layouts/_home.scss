@@ -19,7 +19,7 @@ body {
 .header-bg {
   background-color: $main-color;
   margin: -20px -20px 0px -20px;
-  padding: 10px;
+  padding: 10px 20px;
   color: $text-secondary-color
 }
 
@@ -29,6 +29,10 @@ body {
   &--no-margin{
     margin-top: 0px;
   }
+}
+
+p, li {
+  line-height: 26px;
 }
 
 .link {
