@@ -70,6 +70,22 @@
   text-align: right;
 }
 
+.M-10 {
+  margin: 10px;
+}
+
+.M-20 {
+  margin: 20px;
+}
+
+.M-30 {
+  margin: 30px;
+}
+
+.M-40 {
+  margin: 40px;
+}
+
 .MT-10 {
   margin-top: 10px;
 }
@@ -134,6 +150,39 @@
   margin-right: 40px;
 }
 
+.M-A {
+  margin: auto;
+}
+
+.M-L {
+  margin-left: auto;
+}
+
+.M-R {
+  margin-right: auto;
+}
+
+.M-LR {
+  margin-left: auto;
+  margin-right: auto
+}
+
+.P-10 {
+  padding: 10px;
+}
+
+.P-20 {
+  padding: 20px;
+}
+
+.P-30 {
+  padding: 30px;
+}
+
+.P-40 {
+  padding: 40px;
+}
+
 .PT-10 {
   padding-top: 10px;
 }
@@ -196,4 +245,28 @@
 
 .PR-40 {
   padding-right: 40px;
+}
+
+.B-1s {
+  border: 1px solid;
+}
+
+.BR-5 {
+  border-radius: 5%;
+}
+
+.BR-10 {
+  border-radius: 10%;
+}
+
+.BR-20 {
+  border-radius: 20%;
+}
+
+.BR-25 {
+  border-radius: 25%;
+}
+
+.BR-50 {
+  border-radius: 50%;
 }
