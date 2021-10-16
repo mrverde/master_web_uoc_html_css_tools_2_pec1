@@ -10,22 +10,22 @@ const skills = {
 };
 
 const langs = {
-  "": { "Castellano": 100, "Inglés": 60, "Francés": 50 }
+  "-": { "Castellano": 100, "Inglés": 60, "Francés": 50 }
 };
 
 const generateFieldSet = (skills, headerName, classWhereInsert) => {
-  const header = `<h1>${headerName}</h1>`
-  const skillGroupHtml = (skGroup, skGIndex) => `<fieldset class="container-skg skill-group-${skGIndex}">
-  <legend>${skGroup}</legend>`
+  const header = `<h1 class="box__header box__header--no-margin">${headerName}</h1>`
+  const skillGroupHtml = (skGroup, skGIndex) => `<fieldset class="box-skills__skill-group">
+  <legend class="box-skills__skill-group-legend">${skGroup}</legend>`
 
   const footer = `</fieldset>`
 
   const skillHtml = (skIndex, sk, skValue) => {
     const htmlSk = sk.replace(/\s/g, '').replace('é', '').toLowerCase()
 
-    return `<div class="container-sk skill-${skIndex}">
-              <label for="${htmlSk}">${sk}</label>
-              <progress id="${htmlSk}" max="100" value="${skValue}"> ${skValue}% </progress>
+    return `<div class="box-skills__skill">
+              <label class="box-skills__skill-label" for="${htmlSk}">${sk}</label>
+              <progress class="box-skills__skill-progress-bar" id="${htmlSk}" max="100" value="${skValue}"> ${skValue}% </progress>
             </div>`}
 
   let output = "";
@@ -48,8 +48,8 @@ const generateFieldSet = (skills, headerName, classWhereInsert) => {
 }
 
 const main = () => {
-  generateFieldSet(skills, "Habilidades", ".container-habilidades")
-  generateFieldSet(langs, "Idiomas", ".container-idiomas")
+  generateFieldSet(skills, "Habilidades", ".box-skills")
+  generateFieldSet(langs, "Idiomas", ".box-languages")
 }
 
 main()
