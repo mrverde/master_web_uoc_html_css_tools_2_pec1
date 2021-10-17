@@ -5,7 +5,6 @@
 }
 
 body {
-  min-width: $mqminwidth;
   height: 100vh;
   width: 100vw;
   padding: 2rem;
@@ -13,37 +12,204 @@ body {
   background-color: $bg-box-color;
   color: $text-color;
   min-width: $mqminwidth; // DEV, BORRAR AL FINAL
-  max-width: $mqminwidth; // DEV, BORRAR AL FINAL
+  max-width: $mqmaxwidth; // DEV, BORRAR AL FINAL
+  margin: auto;
 }
 
 .header-bg {
   background-color: $main-color;
-  margin: -20px -20px 0px -20px;
-  padding: 10px 20px;
-  color: $text-secondary-color
+  color: $text-secondary-color;
+
+  @media (max-width: $tablet-width) {
+    margin: -20px -20px 0 -20px;
+    padding: 10px 20px;
+  }
+
+  @media (min-width: $tablet-width + 1) {
+    margin: 0 -20px;
+    padding: 10px 20px;
+  }
 }
 
 .box__header {
   @extend .header-bg;
 
-  &--no-margin{
-    margin-top: 0px;
+  &--no-margin {
+    margin-top: 0;
   }
 }
 
-p, li {
-  line-height: 26px;
+.box {
+  border: 1px solid;
+  padding: 0 20px 20px 20px;
+  margin-bottom: 20px;
+  background-color: $bg-color;
+  box-shadow: 5px 6px 5px -3px rgba(0, 0, 0, 0.3);
+
+  &-presentation {
+    h2 {
+      line-height: 15px;
+    }
+
+    i {
+      @extend .ML-10;
+      @extend .MR-10;
+
+      font-size: 30px;
+    }
+
+    &__photo {
+      @extend .header-bg;
+
+      background-color: $main-color;
+    }
+
+    &__job {
+      @media (min-width: $tablet-width + 1) {
+        margin-top: 40px;
+      }
+    }
+
+    &__first-container {
+      @media (min-width: $tablet-width) {
+        background-color: $main-color;
+        color: $text-secondary-color;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 -20px;
+      }
+    }
+
+    &__second-container {
+      @media (min-width: $tablet-width + 1) {
+        margin-top: 20px;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-evenly;
+      }
+    }
+
+    &__location {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__icon-links {
+      @media (max-width: $tablet-width) {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &-experiences {
+    &__job {
+      margin-bottom: 60px;
+
+      &-header {
+        line-height: 20px;
+        margin-top: 5px;
+      }
+
+      &-title {
+        font-weight: bolder;
+        margin-bottom: 10px;
+      }
+
+      &-company {
+        margin: 0;
+      }
+
+      &-date {
+        margin-top: 10px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-studies {
+    &__study {
+      margin-bottom: 35px;
+      line-height: 25px;
+      margin-top: 5px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__cours {
+      font-weight: bolder;
+      margin-bottom: 5px;
+    }
+
+    &__institution {
+      font-weight: normal;
+      margin: 0;
+    }
+
+    &__date {
+      font-weight: normal;
+      margin-top: 5px;
+    }
+  }
+
+  &-skills {
+    &__all-skill-groups {
+      @media (min-width: $tablet-width + 1) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+      }
+    }
+
+    &__skill-group {
+      @media (min-width: $tablet-width + 1) {
+        max-width: ($mqmaxwidth * 96) / 100;
+        width: 48%;
+      }
+    }
+
+    &__skill-group-legend {
+      font-weight: bold;
+    }
+
+    &__skill {
+      display: flex;
+      flex-direction: column;
+
+      &-progress-bar {
+        height: 5px;
+        margin-bottom: 10px;
+
+        &::-moz-progress-bar {
+          background: $secondary-color;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+          height: 5px;
+        }
+      }
+    }
+  }
+
+  &-others {
+    padding-bottom: 0;
+  }
 }
 
 .link {
-  text-decoration:none;
+  text-decoration: none;
 
   &:link {
-    color: $secondary-color
+    color: $secondary-color;
   }
 
   &:visited {
-    color: $secondary-color
+    color: $secondary-color;
   }
 
   i {
@@ -54,118 +220,3 @@ p, li {
     }
   }
 }
-
-.box {
-  border: 1px solid;
-  padding: 0px 20px 20px 20px;
-  margin-bottom: 20px;
-  background-color: $bg-color;
-  box-shadow: 5px 6px 5px -3px rgba(0,0,0,0.3);
-
-  &-presentation {
- 
-    h2 {
-      line-height: 15px;
-    }
-  
-    i {
-      @extend .ML-10;
-      @extend .MR-10;
-      font-size: 30px;
-    }
-  
-    &__photo {
-      @extend .header-bg;
-      background-color: $main-color;
-    }
-  }
-  
-  &-experiences {
-  
-    &__job {
-      margin-bottom:60px;
-  
-      &-header{
-        line-height: 20px;
-        margin-top:5px;
-      }
-      &-title {
-        font-weight:bolder;
-        margin-bottom: 10px;
-      }
-      &-company {
-        margin: 0px
-      }
-      &-date {
-        margin-top: 10px
-      }
-  
-      &:last-child {
-        margin-bottom:0px;
-      }
-    }
-  }
-  
-  &-studies {
-    &__study {
-      margin-bottom:35px;
-      line-height: 25px;
-      margin-top:5px;
-
-      &:last-child {
-        margin-bottom:0px;
-      }
-    }
-
-    &__cours {
-      font-weight:bolder;
-      margin-bottom: 5px;
-    }
-
-    &__institution {
-      font-weight:normal;
-      margin: 0px
-    }
-
-    &__date {
-      font-weight:normal;
-      margin-top: 5px
-    }
-
-
-  }
-  
-  &-skills {
-    &__skill-group-legend {
-      font-weight: bold;
-    }
-
-    &__skill {
-      display:flex;
-      flex-direction: column;
-
-      &-progress-bar::-moz-progress-bar {
-         background: $secondary-color; 
-         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
-      }
-
-      &-progress-bar::webkit-progress-value {
-        background:red;
-        border-radius: 20px; 
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
-      }
-    }
-  }
-
-  &-others {
-  }
-  
-
-
-}
-
-
-  // @media (min-width: $mqminwidth) {
-  //   max-width: 350px;
-  // }
-

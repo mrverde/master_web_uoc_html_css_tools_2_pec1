@@ -5,16 +5,16 @@ $primary-font: -apple-system, blinkmacsystemfont, "segoe ui", roboto,
   "segoe ui symbol";
 $secondary-font: "georgia", "times new roman", serif;
 
-$bg-color: #ffffff;
+$bg-color: #fff;
 $bg-box-color: #f0f0f0;
 
 $text-color: #3a3a3a;
-$text-secondary-color: #ffffff;
+$text-secondary-color: #fff;
 
 $main-color: #525252;
-$secondary-color: #2b6400;
+$secondary-color: #2b6400a4;
 $third-color: color.complement($secondary-color);
 
 $mqminwidth: 420px;
-$mqmaxwidth: 1920px;
+$mqmaxwidth: 1400px;
 $tablet-width: 768px;
