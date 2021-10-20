@@ -21,13 +21,13 @@ body {
   color: $text-secondary-color;
 
   @media (max-width: $tablet-width) {
-    margin: -20px -20px 0 -20px;
+    margin: 0 -20px 0 -20px;
     padding: 10px 20px;
   }
 
   @media (min-width: $tablet-width + 1) {
     margin: 0 -20px;
-    padding: 10px 20px;
+    padding: 10px 20px 10px 20px;
   }
 }
 
@@ -62,6 +62,11 @@ body {
       @extend .header-bg;
 
       background-color: $main-color;
+
+      @media (min-width: $tablet-width + 1) {
+        margin-left: 0;
+      }
+
     }
 
     &__job {
@@ -71,7 +76,7 @@ body {
     }
 
     &__first-container {
-      @media (min-width: $tablet-width) {
+      @media (min-width: $tablet-width + 1) {
         background-color: $main-color;
         color: $text-secondary-color;
         display: flex;
